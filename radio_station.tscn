@@ -1,0 +1,665 @@
+[gd_scene format=4 uid="uid://b7yxgeqiiys1w"]
+
+[ext_resource type="Texture2D" uid="uid://cyewgntpgu6ob" path="res://assets/oda/retroitems/vinyl.png" id="1_27xju"]
+[ext_resource type="Script" uid="uid://nswutldq5wjc" path="res://body.gd" id="1_tg1nk"]
+[ext_resource type="Script" uid="uid://c7dsf2i43qfb7" path="res://archive_interaction.gd" id="2_vfmoy"]
+[ext_resource type="Texture2D" uid="uid://djq5rtkx28ne4" path="res://assets/Murat/[Free Asset] Pixel Boy 32x64 Animation/[Free Asset] Pixel Boy 32x64 Animation/boy-32-64-idele.png" id="3_xu6bm"]
+[ext_resource type="Texture2D" uid="uid://brxob2c0a5im3" path="res://assets/Murat/[Free Asset] Pixel Boy 32x64 Animation/[Free Asset] Pixel Boy 32x64 Animation/boy-32-64-walkt.png" id="4_lp21s"]
+[ext_resource type="Texture2D" uid="uid://12cpppbofmxe" path="res://assets/oda/cartoon_rooms/tileset_all.png" id="4_vdbti"]
+[ext_resource type="Texture2D" uid="uid://b3hl7mhp0naec" path="res://assets/oda/PI Office ASSET/PI Office ASSET/zemin.png" id="4_xu6bm"]
+[ext_resource type="Texture2D" uid="uid://b0rdeq0orhtaf" path="res://assets/oda/PI Office ASSET/PI Office ASSET/ChatGPT Image 4 Eyl 2026 19_30_23.png" id="7_murvd"]
+[ext_resource type="Texture2D" uid="uid://dvrb2omm0q86s" path="res://assets/oda/Pixel Art Door Pack/Door 7.png" id="19_kq8f6"]
+[ext_resource type="Texture2D" uid="uid://c0ytyxgfhaebs" path="res://assets/Murat/ChatGPT Image 4 Eyl 2026 13_22_45.png" id="21_dajqw"]
+[ext_resource type="Script" uid="uid://dcagleaga22jw" path="res://phone_interaction.gd" id="24_dajqw"]
+[ext_resource type="Script" uid="uid://b2owpb5jyg2ej" path="res://chair_interaction.gd" id="25_murvd"]
+[ext_resource type="Texture2D" uid="uid://4affq0cmu2g7" path="res://assets/oda/PI Office ASSET/PI Office ASSET/ChatGPT Image 4 Eyl 2026 19_22_26.png" id="26_7rmx6"]
+[ext_resource type="Script" uid="uid://cpn3t15f5yjso" path="res://mixer_interaction.gd" id="26_murvd"]
+[ext_resource type="Script" uid="uid://bp4sehhsxof40" path="res://phone_dialogue.gd" id="27_7rmx6"]
+[ext_resource type="Script" uid="uid://3k1a0n4exmpi" path="res://mixer_panel.gd" id="28_dqn7o"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xt0ea"]
+size = Vector2(56, 150)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lp21s"]
+atlas = ExtResource("3_xu6bm")
+region = Rect2(0, 0, 32, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_676wd"]
+atlas = ExtResource("3_xu6bm")
+region = Rect2(32, 0, 32, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fnfy3"]
+atlas = ExtResource("3_xu6bm")
+region = Rect2(64, 0, 32, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kq8f6"]
+atlas = ExtResource("3_xu6bm")
+region = Rect2(96, 0, 32, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8iqy6"]
+atlas = ExtResource("4_lp21s")
+region = Rect2(0, 0, 32, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_d5esh"]
+atlas = ExtResource("4_lp21s")
+region = Rect2(32, 0, 32, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gdcd1"]
+atlas = ExtResource("4_lp21s")
+region = Rect2(64, 0, 32, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wkgp1"]
+atlas = ExtResource("4_lp21s")
+region = Rect2(96, 0, 32, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dajqw"]
+atlas = ExtResource("4_lp21s")
+region = Rect2(128, 0, 32, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_xt0ea"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lp21s")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_676wd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fnfy3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kq8f6")
+}],
+"loop": 1,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8iqy6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_d5esh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gdcd1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wkgp1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dajqw")
+}],
+"loop": 1,
+"name": &"walk",
+"speed": 8.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7l3ti"]
+size = Vector2(40, 850)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qbgox"]
+size = Vector2(40, 850)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_nlima"]
+size = Vector2(1920, 30)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0kq0w"]
+size = Vector2(145, 520)
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_3kiii"]
+texture = ExtResource("4_vdbti")
+0:0/0 = 0
+1:0/0 = 0
+3:0/0 = 0
+4:0/0 = 0
+5:0/0 = 0
+6:0/0 = 0
+7:0/0 = 0
+8:0/0 = 0
+9:0/0 = 0
+10:0/0 = 0
+11:0/0 = 0
+12:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+3:1/0 = 0
+4:1/0 = 0
+5:1/0 = 0
+6:1/0 = 0
+7:1/0 = 0
+8:1/0 = 0
+9:1/0 = 0
+10:1/0 = 0
+11:1/0 = 0
+12:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+3:2/0 = 0
+4:2/0 = 0
+5:2/0 = 0
+6:2/0 = 0
+7:2/0 = 0
+8:2/0 = 0
+9:2/0 = 0
+10:2/0 = 0
+11:2/0 = 0
+12:2/0 = 0
+1:3/0 = 0
+2:3/0 = 0
+3:3/0 = 0
+4:3/0 = 0
+5:3/0 = 0
+6:3/0 = 0
+7:3/0 = 0
+8:3/0 = 0
+9:3/0 = 0
+10:3/0 = 0
+11:3/0 = 0
+12:3/0 = 0
+0:4/0 = 0
+1:4/0 = 0
+2:4/0 = 0
+3:4/0 = 0
+4:4/0 = 0
+5:4/0 = 0
+6:4/0 = 0
+7:4/0 = 0
+8:4/0 = 0
+9:4/0 = 0
+10:4/0 = 0
+11:4/0 = 0
+12:4/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_xt0ea"]
+sources/0 = SubResource("TileSetAtlasSource_3kiii")
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ms60y"]
+size = Vector2(51, 135)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_87yxo"]
+size = Vector2(109, 218)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rnq8h"]
+size = Vector2(109, 90)
+
+[node name="Radio Station" type="Node2D" unique_id=1126936686]
+
+[node name="Background" type="ColorRect" parent="." unique_id=1044798470]
+offset_right = 1920.0
+offset_bottom = 1080.0
+color = Color(0.103743516, 0.10374353, 0.103743516, 1)
+
+[node name="Vinyl" type="Sprite2D" parent="Background" unique_id=585540374]
+position = Vector2(804, 320.00003)
+scale = Vector2(2.53125, 2.46875)
+texture = ExtResource("1_27xju")
+
+[node name="Vinyl2" type="Sprite2D" parent="Background" unique_id=606669173]
+position = Vector2(1330, 434)
+scale = Vector2(2.53125, 2.46875)
+texture = ExtResource("1_27xju")
+
+[node name="Vinyl3" type="Sprite2D" parent="Background" unique_id=1824660015]
+position = Vector2(1330, 320)
+scale = Vector2(2.53125, 2.46875)
+texture = ExtResource("1_27xju")
+
+[node name="Vinyl4" type="Sprite2D" parent="Background" unique_id=284176742]
+position = Vector2(804, 434)
+scale = Vector2(2.53125, 2.4687498)
+texture = ExtResource("1_27xju")
+
+[node name="Vinyl5" type="Sprite2D" parent="Background" unique_id=415259655]
+position = Vector2(804, 548)
+scale = Vector2(2.53125, 2.46875)
+texture = ExtResource("1_27xju")
+
+[node name="Vinyl6" type="Sprite2D" parent="Background" unique_id=1191454282]
+position = Vector2(1330, 548)
+scale = Vector2(2.53125, 2.4687498)
+texture = ExtResource("1_27xju")
+
+[node name="Bookcase1" type="Sprite2D" parent="Background" unique_id=1763761721]
+z_index = 5
+position = Vector2(1783.4999, 697.375)
+scale = Vector2(0.94088775, 0.86408436)
+texture = ExtResource("7_murvd")
+region_enabled = true
+region_rect = Rect2(347.41977, 3.6678238, 203.28012, 355.74017)
+
+[node name="Desk1" type="Sprite2D" parent="Background" unique_id=2141790301]
+position = Vector2(1075, 755)
+scale = Vector2(0.8292683, 0.8600823)
+texture = ExtResource("7_murvd")
+region_enabled = true
+region_rect = Rect2(23.000076, 369.2, 369.00012, 243.80011)
+
+[node name="Door1" type="Sprite2D" parent="Background" unique_id=1537182115]
+position = Vector2(170.5034, 724.96124)
+scale = Vector2(0.9006609, 0.8369518)
+texture = ExtResource("7_murvd")
+region_enabled = true
+region_rect = Rect2(19.479187, 46.923233, 141.02783, 301.16553)
+
+[node name="Door7" type="Sprite2D" parent="Background" unique_id=34537302]
+position = Vector2(1553.25, 731.5)
+scale = Vector2(3.0119016, 2.6111112)
+texture = ExtResource("19_kq8f6")
+
+[node name="TownAtDark" type="Sprite2D" parent="Background" unique_id=1500517648]
+position = Vector2(968.6631, 492.4623)
+scale = Vector2(0.8341733, 1.5354549)
+texture = ExtResource("7_murvd")
+region_enabled = true
+region_rect = Rect2(423.4629, 847.64465, 207.43811, 153.71912)
+
+[node name="NightStand1" type="Sprite2D" parent="Background" unique_id=1755404732]
+position = Vector2(1351, 758)
+scale = Vector2(0.9881668, 0.95990354)
+texture = ExtResource("7_murvd")
+region_enabled = true
+region_rect = Rect2(1362.4078, 404.34387, 169.47534, 207.50049)
+
+[node name="Couch1" type="Sprite2D" parent="Background" unique_id=1962669477]
+z_index = 10
+position = Vector2(668.99994, 815.00006)
+scale = Vector2(0.9674689, 0.6971268)
+texture = ExtResource("7_murvd")
+region_enabled = true
+region_rect = Rect2(804.32825, 447.8964, 324.12097, 169.51157)
+
+[node name="Watch" type="Sprite2D" parent="Background" unique_id=63135098]
+position = Vector2(1548, 519)
+scale = Vector2(0.891926, 1.1305798)
+texture = ExtResource("7_murvd")
+region_enabled = true
+region_rect = Rect2(1405.9885, 161.90884, 114.24951, 84.44531)
+
+[node name="zemin" type="Sprite2D" parent="Background" unique_id=298840679]
+position = Vector2(961.75, 963.5)
+scale = Vector2(1.8753664, 2.292929)
+texture = ExtResource("4_xu6bm")
+region_enabled = true
+region_rect = Rect2(26.880585, 904.636, 1023.21045, 99.09094)
+
+[node name="Floor" type="ColorRect" parent="." unique_id=204738650]
+offset_top = 850.0
+offset_right = 1920.0
+offset_bottom = 1080.0
+color = Color(0.71211535, 0.60388225, 0.50303614, 0.3254902)
+
+[node name="Archive" type="ColorRect" parent="." unique_id=1690553234]
+visible = false
+offset_left = 120.0
+offset_top = 250.0
+offset_right = 440.0
+offset_bottom = 820.0
+color = Color(0.27719662, 0.12574947, 0.006566575, 1)
+
+[node name="WC_Door" type="ColorRect" parent="." unique_id=1020978575]
+visible = false
+offset_left = 500.0
+offset_top = 340.0
+offset_right = 650.0
+offset_bottom = 820.0
+color = Color(0.38189805, 0, 0.043817773, 1)
+
+[node name="Desk" type="ColorRect" parent="." unique_id=2061210851]
+visible = false
+offset_left = 720.0
+offset_top = 590.0
+offset_right = 1340.0
+offset_bottom = 820.0
+color = Color(0.23, 0.16790001, 0.16790001, 1)
+
+[node name="Window" type="ColorRect" parent="." unique_id=1203764468]
+visible = false
+offset_left = 790.0
+offset_top = 230.0
+offset_right = 1290.0
+offset_bottom = 520.0
+color = Color(0.03137255, 0.019607844, 0.654902, 1)
+
+[node name="MainDoor" type="ColorRect" parent="." unique_id=253488726]
+visible = false
+offset_left = 1450.0
+offset_top = 320.0
+offset_right = 1630.0
+offset_bottom = 820.0
+color = Color(0.27058825, 0.6862745, 0.56078434, 1)
+
+[node name="NoticeBoard" type="ColorRect" parent="." unique_id=306107347]
+offset_left = 1690.0
+offset_top = 330.0
+offset_right = 1860.0
+offset_bottom = 550.0
+color = Color(0.06666667, 0.37254903, 0.03137255, 1)
+
+[node name="Murat" type="CharacterBody2D" parent="." unique_id=916320467]
+position = Vector2(251, 850)
+script = ExtResource("1_tg1nk")
+
+[node name="Body" type="ColorRect" parent="Murat" unique_id=853099660]
+visible = false
+offset_left = -30.0
+offset_top = -170.0
+offset_right = 30.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Murat" unique_id=398516777]
+position = Vector2(-2, -75)
+shape = SubResource("RectangleShape2D_xt0ea")
+
+[node name="MuratSprite" type="AnimatedSprite2D" parent="Murat" unique_id=916704381]
+z_index = 10
+position = Vector2(-0.9999924, -66)
+scale = Vector2(4, 4)
+sprite_frames = SubResource("SpriteFrames_xt0ea")
+animation = &"walk"
+autoplay = "idle"
+
+[node name="MuratSitting" type="Sprite2D" parent="." unique_id=1801783812]
+visible = false
+position = Vector2(1067, 773.25)
+scale = Vector2(0.6417908, 0.65209776)
+texture = ExtResource("21_dajqw")
+region_enabled = true
+region_rect = Rect2(850.1165, 563.8601, 134.63873, 286.99304)
+
+[node name="LeftWall" type="StaticBody2D" parent="." unique_id=420336955]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="LeftWall" unique_id=1314947891]
+position = Vector2(20, 425)
+shape = SubResource("RectangleShape2D_7l3ti")
+
+[node name="RightWall" type="StaticBody2D" parent="." unique_id=961203812]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RightWall" unique_id=288162526]
+position = Vector2(1900, 425)
+shape = SubResource("RectangleShape2D_qbgox")
+
+[node name="Ground" type="StaticBody2D" parent="." unique_id=2043387980]
+position = Vector2(960, 865)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ground" unique_id=1116345774]
+shape = SubResource("RectangleShape2D_nlima")
+
+[node name="ArchiveInteraction" type="Area2D" parent="." unique_id=1371259246]
+script = ExtResource("2_vfmoy")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ArchiveInteraction" unique_id=1979155898]
+visible = false
+position = Vector2(388.5, 563)
+shape = SubResource("RectangleShape2D_0kq0w")
+
+[node name="InteractionLabel" type="Label" parent="." unique_id=1111798533]
+visible = false
+offset_left = 220.0
+offset_top = 210.0
+offset_right = 289.0
+offset_bottom = 233.0
+text = "E - İncele"
+
+[node name="ArchivePanel" type="Panel" parent="." unique_id=503789629]
+visible = false
+z_index = 50
+offset_left = 560.0
+offset_top = 250.0
+offset_right = 1360.0
+offset_bottom = 700.0
+
+[node name="ArchiveText" type="Label" parent="ArchivePanel" unique_id=1804268991]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+text = "Eski yayın kayıtları ve kasetler burada saklanıyor."
+
+[node name="ArchiveTitle" type="Label" parent="ArchivePanel" unique_id=1667995036]
+layout_mode = 0
+offset_left = 40.0
+offset_top = 30.0
+offset_right = 168.0
+offset_bottom = 53.0
+text = "ARŞİV KAYITLARI"
+
+[node name="Tape1" type="Button" parent="ArchivePanel" unique_id=1656600468]
+layout_mode = 0
+offset_left = 60.0
+offset_top = 110.0
+offset_right = 236.0
+offset_bottom = 141.0
+text = "Kaset 01 - Gece Yayını"
+
+[node name="Tape2" type="Button" parent="ArchivePanel" unique_id=1987845229]
+layout_mode = 0
+offset_left = 60.0
+offset_top = 170.0
+offset_right = 243.0
+offset_bottom = 201.0
+text = "Kaset 02 - İsimsiz Kayıt"
+
+[node name="Tape3" type="Button" parent="ArchivePanel" unique_id=1313218107]
+layout_mode = 0
+offset_left = 60.0
+offset_top = 230.0
+offset_right = 208.0
+offset_bottom = 261.0
+text = "Kaset 03 - 14 Ekim"
+
+[node name="TapeDescription" type="Label" parent="ArchivePanel" unique_id=1688906724]
+layout_mode = 0
+offset_left = 400.0
+offset_top = 110.0
+offset_right = 440.0
+offset_bottom = 133.0
+
+[node name="RoomTiles" type="TileMapLayer" parent="." unique_id=1361886576]
+visible = false
+tile_map_data = PackedByteArray("AAAFADwAAAALAAIAAAAGADwAAAALAAIAAAAHADwAAAALAAIAAAAIADwAAAALAAIAAAAJADwAAAALAAIAAAAKAD0AAAALAAIAAAALAD0AAAALAAIAAAAMAD0AAAALAAIAAAANAD0AAAALAAIAAAAOAD0AAAALAAIAAAAPAD0AAAALAAIAAAAQAD0AAAALAAIAAAARAD0AAAALAAIAAAASAD4AAAALAAIAAAATAD4AAAALAAIAAAAUAD4AAAALAAIAAAAVAD4AAAALAAIAAAAWAD4AAAALAAIAAAAXAD4AAAALAAIAAAAYAD4AAAALAAIAAAAZAD4AAAALAAIAAAAaAD4AAAALAAIAAAAbAD8AAAALAAIAAAAcAD8AAAALAAIAAAAdAD8AAAALAAIAAAAeAD8AAAALAAIAAAAfAD8AAAALAAIAAAAgAD8AAAALAAIAAAAhAD8AAAALAAIAAAAiAD8AAAALAAIAAAAjAD8AAAALAAIAAAAkAD8AAAALAAIAAAAlAD8AAAALAAIAAAAmAD8AAAALAAIAAAAnAD8AAAALAAIAAAAoAD8AAAALAAIAAAApAD8AAAALAAIAAAAqAD8AAAALAAIAAAArAD8AAAALAAIAAAAsAD8AAAALAAIAAAAtAD8AAAALAAIAAAAuAD8AAAALAAIAAAAvAD8AAAALAAIAAAAwAD8AAAALAAIAAAAxAD8AAAALAAIAAAAyAD8AAAALAAIAAAAzAD8AAAALAAIAAAAzAD4AAAALAAIAAAA0AD4AAAALAAIAAAA1AD4AAAALAAIAAAA2AD4AAAALAAIAAAA3AD4AAAALAAIAAAA4AD4AAAALAAIAAAA5AD4AAAALAAIAAAA6AD4AAAALAAIAAAA7AD4AAAALAAIAAAA8AD4AAAALAAIAAAA9AD4AAAALAAIAAAA+AD4AAAALAAIAAAA/AD4AAAALAAIAAABAAD4AAAALAAIAAABBAD4AAAALAAIAAABCAD4AAAALAAIAAABDAD4AAAALAAIAAABEAD0AAAALAAIAAABFAD0AAAALAAIAAABGAD0AAAALAAIAAABHAD0AAAALAAIAAABIAD0AAAALAAIAAABJAD0AAAALAAIAAABKAD0AAAALAAIAAABLAD0AAAALAAIAAABMAD0AAAALAAIAAABNAD0AAAALAAIAAABOAD0AAAALAAIAAABPAD0AAAALAAIAAABQAD0AAAALAAIAAABRAD0AAAALAAIAAABSAD0AAAALAAIAAABTAD0AAAALAAIAAABUAD4AAAALAAIAAABVAD4AAAALAAIAAABWAD4AAAALAAIAAABXAD4AAAALAAIAAABYAD4AAAALAAIAAABZAD4AAAALAAIAAABaAD4AAAALAAIAAABbAD4AAAALAAIAAABcAD4AAAALAAIAAABdAD4AAAALAAIAAABeAD4AAAALAAIAAABfAD4AAAALAAIAAABgAD4AAAALAAIAAABhAD4AAAALAAIAAABiAD4AAAALAAIAAABjAD4AAAALAAIAAABkAD4AAAALAAIAAABlAD4AAAALAAIAAABmAD4AAAALAAIAAABnAD4AAAALAAIAAABoAD4AAAALAAIAAABpAD4AAAALAAIAAABqAD4AAAALAAIAAABrAD4AAAALAAIAAABsAD4AAAALAAIAAABtAD4AAAALAAIAAABuAD4AAAALAAIAAABvAD4AAAALAAIAAABwAD4AAAALAAIAAABxAD4AAAALAAIAAAByAD4AAAALAAIAAABzAD4AAAALAAIAAAB0AD4AAAALAAIAAAB1AD4AAAALAAIAAAB2AD4AAAALAAIAAAB3AD4AAAALAAIAAABxAD0AAAALAAIAAAA=")
+tile_set = SubResource("TileSet_xt0ea")
+
+[node name="ArchiveAudio" type="AudioStreamPlayer2D" parent="." unique_id=2081625344]
+
+[node name="PhoneInteraction" type="Area2D" parent="." unique_id=1063889648]
+script = ExtResource("24_dajqw")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PhoneInteraction" unique_id=1283357363]
+position = Vector2(1138, 684)
+shape = SubResource("RectangleShape2D_ms60y")
+
+[node name="PhoneInteractionLabel" type="Label" parent="." unique_id=792531800]
+visible = false
+offset_left = 1100.0
+offset_top = 600.0
+offset_right = 1213.0
+offset_bottom = 623.0
+text = "E - Telefonu Aç"
+
+[node name="Chair" type="Sprite2D" parent="." unique_id=504075472]
+position = Vector2(1067.9999, 792.9999)
+scale = Vector2(0.752, 0.752)
+texture = ExtResource("21_dajqw")
+region_enabled = true
+region_rect = Rect2(1208.9557, 644.55005, 127.55249, 181.81592)
+
+[node name="ChairInteraction" type="Area2D" parent="." unique_id=1258452816]
+script = ExtResource("25_murvd")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ChairInteraction" unique_id=612329741]
+visible = false
+position = Vector2(1052.5, 756)
+shape = SubResource("RectangleShape2D_87yxo")
+
+[node name="ChairInteractionLabel" type="Label" parent="." unique_id=65735129]
+visible = false
+offset_right = 40.0
+offset_bottom = 23.0
+text = "E - Otur"
+
+[node name="MixerInteraction" type="Area2D" parent="." unique_id=1033010295]
+script = ExtResource("26_murvd")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="MixerInteraction" unique_id=758092504]
+position = Vector2(980, 705)
+shape = SubResource("RectangleShape2D_rnq8h")
+
+[node name="MouseInteractionLabel" type="Label" parent="." unique_id=1968947091]
+visible = false
+offset_right = 40.0
+offset_bottom = 23.0
+text = "Aç"
+
+[node name="PhoneDialoguePanel" type="Panel" parent="." unique_id=1354183803]
+visible = false
+offset_left = 438.0
+offset_top = 901.0
+offset_right = 1586.0
+offset_bottom = 1077.0
+script = ExtResource("27_7rmx6")
+
+[node name="SpeakerName" type="Label" parent="PhoneDialoguePanel" unique_id=589652540]
+layout_mode = 0
+offset_left = 11.0
+offset_top = 11.0
+offset_right = 84.0
+offset_bottom = 34.0
+text = "ARAYAN :"
+
+[node name="DialogueText" type="Label" parent="PhoneDialoguePanel" unique_id=107500963]
+layout_mode = 0
+offset_left = 89.0
+offset_top = 11.0
+offset_right = 172.0
+offset_bottom = 34.0
+text = "İyi geceler."
+
+[node name="MixerPanel" type="Panel" parent="." unique_id=1385390580]
+visible = false
+z_index = 100
+offset_left = 729.0
+offset_top = 587.0
+offset_right = 892.0
+offset_bottom = 740.0
+script = ExtResource("28_dqn7o")
+
+[node name="MixerTitle" type="Label" parent="MixerPanel" unique_id=1441616485]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 8.0
+offset_right = 155.0
+offset_bottom = 31.0
+text = "YAYIN MİKSERİ"
+
+[node name="Song1Button" type="Button" parent="MixerPanel" unique_id=664699424]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 38.0
+offset_right = 155.0
+offset_bottom = 69.0
+text = "01 - Gece Yolu"
+
+[node name="Song2Button" type="Button" parent="MixerPanel" unique_id=1284528458]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 72.0
+offset_right = 155.0
+offset_bottom = 103.0
+text = "02 - Uzaklarda"
+
+[node name="CloseButton" type="Button" parent="MixerPanel" unique_id=970200085]
+layout_mode = 0
+offset_left = 83.0
+offset_top = 112.0
+offset_right = 155.0
+offset_bottom = 143.0
+text = "Kapat"
+
+[node name="MusicPlayer" type="AudioStreamPlayer2D" parent="." unique_id=1020160498]
+
+[node name="NewBookcase" type="Sprite2D" parent="." unique_id=587932269]
+position = Vector2(373, 710)
+texture = ExtResource("26_7rmx6")
+region_enabled = true
+region_rect = Rect2(576.8596, 79.52215, 154.05847, 275.4591)
+
+[node name="TownAtDark" type="Sprite2D" parent="." unique_id=1318682628]
+position = Vector2(1169.0815, 492.26886)
+scale = Vector2(0.8301293, 1.5128254)
+texture = ExtResource("7_murvd")
+region_enabled = true
+region_rect = Rect2(423.4629, 847.64465, 207.43811, 153.71912)
+
+[node name="Plaks" type="Sprite2D" parent="." unique_id=532396726]
+position = Vector2(1068, 287)
+scale = Vector2(1.3893682, 1.2642856)
+texture = ExtResource("7_murvd")
+region_enabled = true
+region_rect = Rect2(1013.2896, 859.3597, 261.25604, 70.09491)
+
+[node name="SonFrekansGörsel" type="Sprite2D" parent="." unique_id=718604804]
+position = Vector2(1773.5, 419.00003)
+scale = Vector2(1.3955228, 1.1861473)
+texture = ExtResource("7_murvd")
+region_enabled = true
+region_rect = Rect2(1239.4241, 93.94873, 134.1659, 231.76831)
+
+[node name="telefon" type="Sprite2D" parent="." unique_id=562669645]
+position = Vector2(1122, 690)
+scale = Vector2(0.78442734, 1.1493506)
+texture = ExtResource("7_murvd")
+region_enabled = true
+region_rect = Rect2(728.60547, 787.3159, 75.434204, 45.67108)
+
+[node name="YazıTahtası" type="Sprite2D" parent="." unique_id=1940519965]
+position = Vector2(613, 630)
+scale = Vector2(1.0483191, 1)
+texture = ExtResource("7_murvd")
+region_enabled = true
+region_rect = Rect2(959.0001, 146.00002, 238.75305, 185.50026)
+
+[node name="askılık" type="Sprite2D" parent="." unique_id=1534990508]
+position = Vector2(876, 736)
+scale = Vector2(1, 1.5779221)
+texture = ExtResource("7_murvd")
+region_enabled = true
+region_rect = Rect2(858.7467, 841.8067, 58.913574, 154.1435)
+
+[node name="duvarHalısı" type="Sprite2D" parent="." unique_id=102088257]
+position = Vector2(285, 381.00003)
+scale = Vector2(1.9237288, 1.689394)
+texture = ExtResource("7_murvd")
+region_enabled = true
+region_rect = Rect2(664.35767, 859.26514, 177.51514, 132.91248)
+
+[node name="havalandırma" type="Sprite2D" parent="." unique_id=2127958866]
+position = Vector2(189.62502, 99)
+scale = Vector2(2.3214288, 2.4516127)
+texture = ExtResource("7_murvd")
+region_enabled = true
+region_rect = Rect2(1442.2064, 925.57874, 77.59729, 62.95642)
+
+[node name="havalandırma2" type="Sprite2D" parent="." unique_id=531691257]
+position = Vector2(1786, 105.99999)
+scale = Vector2(2.3214288, 2.4516127)
+texture = ExtResource("7_murvd")
+region_enabled = true
+region_rect = Rect2(1442.2064, 925.57874, 77.59729, 62.95642)
+
+[node name="copkutusu" type="Sprite2D" parent="." unique_id=288242013]
+position = Vector2(1253, 819)
+texture = ExtResource("7_murvd")
+region_enabled = true
+region_rect = Rect2(1264.0476, 919.958, 49.673584, 67.172424)
+
+[connection signal="body_entered" from="ArchiveInteraction" to="ArchiveInteraction" method="_on_body_entered"]
+[connection signal="body_exited" from="ArchiveInteraction" to="ArchiveInteraction" method="_on_body_exited"]
+[connection signal="pressed" from="ArchivePanel/Tape1" to="ArchiveInteraction" method="_on_tape_1_pressed"]
+[connection signal="pressed" from="ArchivePanel/Tape2" to="ArchiveInteraction" method="_on_tape_2_pressed"]
+[connection signal="pressed" from="ArchivePanel/Tape3" to="ArchiveInteraction" method="_on_tape_3_pressed"]
+[connection signal="body_entered" from="PhoneInteraction" to="PhoneInteraction" method="_on_body_entered"]
+[connection signal="body_exited" from="PhoneInteraction" to="PhoneInteraction" method="_on_body_exited"]
+[connection signal="body_entered" from="ChairInteraction" to="ChairInteraction" method="_on_body_entered"]
+[connection signal="body_exited" from="ChairInteraction" to="ChairInteraction" method="_on_body_exited"]
